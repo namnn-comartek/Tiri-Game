@@ -40,12 +40,18 @@ export default class Wheel extends React.Component {
                         </TouchableOpacity>
 
                         <Image
+                            style={styles.imgHexagon}
+                            source={require('../images/hexagon.png')}>
+                        </Image>
+                        <Image
                             style={styles.imgArrow}
                             source={require('../images/arrow.png')}>
                         </Image>
 
-                        <Turn style={styles.image}>
-                        </Turn>
+                        <View style={styles.turn}>
+                            <Turn style={styles.image}>
+                            </Turn>
+                        </View>
 
                         <TouchableOpacity
                             onPress={() => this.props.navigation.navigate('Wheel1')}
@@ -143,7 +149,18 @@ const styles = StyleSheet.create({
     mid: {
         position: 'relative'
     },
-
+    imgHexagon: {
+        width: 37,
+        height: 40,
+        position: 'absolute',
+        zIndex: 4,
+        alignSelf: 'center',
+        marginTop: 310,
+        shadowColor: '#000000',
+        shadowOffset: { width: 1, height: 1 },
+        shadowOpacity: 0.9,
+        shadowRadius: 1,
+    },
     imgArrow: {
         width: 50,
         height: 40,
@@ -152,7 +169,9 @@ const styles = StyleSheet.create({
         marginTop: 165,
         zIndex: 3
     },
-
+    turn: {
+        transform: [{ rotate: '15deg' }]
+    },
     image: {
         alignSelf: 'center',
         marginLeft: 10,

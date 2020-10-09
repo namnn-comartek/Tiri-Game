@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { Image } from 'react-native'
+import { Image, StyleSheet } from 'react-native'
 
 import '../css/Turn.css'
 
@@ -10,7 +10,6 @@ export default class Turn extends Component {
             <div className="Content">
                 <div class="pieContainer">
                     <div class="pieBackground">
-                        
                         <div id="pieSlice2" class="hold"><div class="pie"></div></div>
                         <div id="pieSlice3" class="hold"><div class="pie"></div></div>
                         <div id="pieSlice4" class="hold"><div class="pie"></div></div>
@@ -35,8 +34,8 @@ export default class Turn extends Component {
                         <p class="content10">200 ĐIỂM</p>
                         <p class="content11">MẤT LƯỢT</p>
                         <p class="content12">20 ĐIỂM</p>
-                        <Image style={{ width: 30, height: 30, marginLeft: 260, marginTop: 105, position: 'absolute' }} source={require('../images/gift.png')}></Image>
-                        <Image style={{ width: 30, height: 30, marginLeft: 100, marginTop: 250, position: 'absolute', transform: [{ rotate: '470deg' }] }} source={require('../images/milk.png')}></Image>
+                        <Image style={styles.imgGift} source={require('../images/gift.png')}></Image>
+                        <Image style={styles.imgMilk} source={require('../images/milk.png')}></Image>
                     </div>
                 </div>
             </div>
@@ -44,3 +43,21 @@ export default class Turn extends Component {
     }
 }
 
+const styles = StyleSheet.create({
+    imgGift: {
+        width: 30,
+        height: 30,
+        marginLeft: 260,
+        marginTop: 100,
+        position: 'absolute',
+        transform: [{ rotate: '345deg' }]
+    },
+    imgMilk: {
+        width: 30,
+        height: 30,
+        marginLeft: 100,
+        marginTop: 250,
+        position: 'absolute',
+        transform: [{ rotate: '470deg' }]
+    },
+});

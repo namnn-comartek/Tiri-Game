@@ -141,7 +141,6 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
     btnTurn: {
-        backgroundColor: 'white',
         alignSelf: 'center',
         marginTop: 140,
         width: 60,
